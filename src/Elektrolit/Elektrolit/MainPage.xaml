@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Elektrolit.MainPage" Title="Kondenzátorkezelő" BackgroundColor="#1f1f1f">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="capacitor.jpg"/>
+    </ContentPage.ToolbarItems>
+
+    <Grid Margin="20,20,20,20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="btn_list" Text="Listáz" Grid.Row="0" BackgroundColor="#3d3d3d" Clicked="btn_List_Click"></Button>
+        <Button x:Name="btn_igeny" Text="Igény" Grid.Row="1" BackgroundColor="#3d3d3d" Clicked="btn_Igeny_Click"></Button>
+        <Button x:Name="btn_felvisz" Text="Felvisz" Grid.Row="2" BackgroundColor="#3d3d3d" Clicked="btn_Felvisz_Click"></Button>
+        <Button x:Name="btn_felhasznal" Text="Felhasznál" Grid.Row="3" BackgroundColor="#3d3d3d" Clicked="btn_Felhasznal_Click"></Button>
+
+    </Grid>
+</ContentPage>

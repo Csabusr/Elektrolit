@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32414.318
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elektrolit.Android", "Elektrolit\Elektrolit.Android\Elektrolit.Android.csproj", "{12D09FD7-5E0A-483A-9B76-8444B357A03B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elektrolit", "Elektrolit\Elektrolit\Elektrolit.csproj", "{74984153-E079-43C2-A8F2-496C9D0163F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12D09FD7-5E0A-483A-9B76-8444B357A03B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12D09FD7-5E0A-483A-9B76-8444B357A03B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12D09FD7-5E0A-483A-9B76-8444B357A03B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{12D09FD7-5E0A-483A-9B76-8444B357A03B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12D09FD7-5E0A-483A-9B76-8444B357A03B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12D09FD7-5E0A-483A-9B76-8444B357A03B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{74984153-E079-43C2-A8F2-496C9D0163F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74984153-E079-43C2-A8F2-496C9D0163F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74984153-E079-43C2-A8F2-496C9D0163F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74984153-E079-43C2-A8F2-496C9D0163F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6461A1C8-CF8F-48C5-B845-467946327ACF}
+	EndGlobalSection
+EndGlobal

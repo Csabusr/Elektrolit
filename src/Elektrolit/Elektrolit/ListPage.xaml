@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Elektrolit.ListPage" Title="Raktáron">
+    <Grid Margin="20,20,20,20">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+
+        <Grid BackgroundColor="#a1d0ea">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" FontSize="20" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Text="Kapacitás" TextColor="Black" />
+            <Label Grid.Column="1" FontSize="20" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Text="Feszültség" TextColor="Black" />
+            <Label Grid.Column="2" FontSize="20" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Text="Darab" TextColor="Black" />
+        </Grid>
+
+        <ListView x:Name="List_Kondi" Grid.Row="1"
+                  ItemsSource="{Binding Kondenzator}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Label HorizontalTextAlignment="Center" Grid.Column="0" Text="{Binding kapacitas}" TextColor="#a1d0ea" VerticalTextAlignment="Center"/>
+                            <Label HorizontalTextAlignment="Center" Grid.Column="1" Text="{Binding feszultseg}" TextColor="#a1d0ea" VerticalTextAlignment="Center"/>
+                            <Label HorizontalTextAlignment="Center" Grid.Column="2" Text="{Binding darab}" TextColor="#a1d0ea" VerticalTextAlignment="Center"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+                
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</ContentPage>
