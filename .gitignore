@@ -1,2 +1,7 @@
 
 src/.vs/
+src/Elektrolit/Elektrolit/bin/
+src/Elektrolit/Elektrolit/obj/
+src/Elektrolit/Elektrolit.Android/bin/
+src/Elektrolit/Elektrolit.Android/obj/
+.DS_Store
