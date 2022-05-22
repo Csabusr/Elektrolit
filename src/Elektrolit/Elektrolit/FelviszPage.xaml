@@ -87,6 +87,21 @@
                         </Picker.Items>
                     </Picker>
 
+                    <Label
+                        Grid.Row="4"
+                        FontSize="15"
+                        HorizontalTextAlignment="Start"
+                        Text="Darab"
+                        VerticalTextAlignment="Center" />
+                    <Entry
+                        Grid.Row="5"
+                        Grid.ColumnSpan="2"
+                        HorizontalTextAlignment="Center" />
+
+                    <Button
+                        Grid.Row="6"
+                        Grid.ColumnSpan="2"
+                        Text="Rögzít" />
                 </Grid>
             </Grid>
         </StackLayout>
