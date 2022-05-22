@@ -16,27 +16,16 @@ namespace Elektrolit
         {
             InitializeComponent();
 
-            List<Kondenzator> DuplicatedList = new List<Kondenzator>();
+            List<Kondenzator> notNullKondensators = new List<Kondenzator>();
 
             foreach (Kondenzator item in kondenzatorList)
             {
-
-                item.darab = kondenzatorList.FindAll(e => (e.kapacitas == item.kapacitas && e.feszultseg == item.feszultseg)).Count();
-
-
-                //DuplicatedList.Add(kondenzatorList.Find(e =>(e.kapacitas == item.kapacitas && e.feszultseg == item.feszultseg && e.id != item.id)));
+                if(item.kell == false && item.darab > 0)
+                {
+                    notNullKondensators.Add(item);
+                }
             }
-           
-           
-
-            foreach (Kondenzator item in DuplicatedList)
-            {
-
-                kondenzatorList.Remove(item);
-            }
-
-
-            List_Kondi.ItemsSource = kondenzatorList.Distinct().ToList();
+            List_Kondi.ItemsSource = notNullKondensators.Distinct().ToList();
         }
     }
 }

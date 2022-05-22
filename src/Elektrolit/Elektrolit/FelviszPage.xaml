@@ -1,12 +1,94 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Elektrolit.FelviszPage">
+<ContentPage
+    x:Class="Elektrolit.FelviszPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Felvisz">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Grid Margin="20,20,20,20">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Column="0"
+                        FontSize="15"
+                        HorizontalTextAlignment="Center"
+                        Text="Készítendő termék: "
+                        VerticalTextAlignment="Center" />
+                    <Label
+                        Grid.Column="1"
+                        FontSize="15"
+                        HorizontalTextAlignment="Center"
+                        Text="#####"
+                        VerticalTextAlignment="Center" />
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Row="0"
+                        FontSize="15"
+                        HorizontalTextAlignment="Start"
+                        Text="Kapacitás"
+                        VerticalTextAlignment="Center" />
+                    <Entry
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        HorizontalTextAlignment="End" />
+                    <Picker
+                        Title="Kapacitás"
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        HorizontalTextAlignment="Start">
+                        <Picker.Items>
+                            <x:String>F</x:String>
+                            <x:String>mf</x:String>
+                            <x:String>µF</x:String>
+                            <x:String>nF</x:String>
+                            <x:String>pF</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                    <Label
+                        Grid.Row="2"
+                        FontSize="15"
+                        HorizontalTextAlignment="Start"
+                        Text="Feszültség"
+                        VerticalTextAlignment="Center" />
+                    <Entry
+                        Grid.Row="3"
+                        Grid.Column="0"
+                        HorizontalTextAlignment="End" />
+                    <Picker
+                        Title="Feszültség"
+                        Grid.Row="3"
+                        Grid.Column="1"
+                        HorizontalTextAlignment="Start"
+                        SelectedIndex="0">
+                        <Picker.Items>
+                            <x:String>V</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                </Grid>
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

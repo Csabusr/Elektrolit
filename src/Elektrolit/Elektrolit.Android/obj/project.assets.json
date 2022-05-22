@@ -3295,34 +3295,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\FCsaba\\.nuget\\packages\\": {}
+    "/Users/fugedicsaba/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "I:\\Personal\\Elektrolit\\Elektrolit\\Elektrolit.Android\\Elektrolit.Android.csproj",
+      "projectUniqueName": "/Users/fugedicsaba/dev/Elektrolit/src/Elektrolit/Elektrolit.Android/Elektrolit.Android.csproj",
       "projectName": "Elektrolit.Android",
-      "projectPath": "I:\\Personal\\Elektrolit\\Elektrolit\\Elektrolit.Android\\Elektrolit.Android.csproj",
-      "packagesPath": "C:\\Users\\FCsaba\\.nuget\\packages\\",
-      "outputPath": "I:\\Personal\\Elektrolit\\Elektrolit\\Elektrolit.Android\\obj\\",
+      "projectPath": "/Users/fugedicsaba/dev/Elektrolit/src/Elektrolit/Elektrolit.Android/Elektrolit.Android.csproj",
+      "packagesPath": "/Users/fugedicsaba/.nuget/packages/",
+      "outputPath": "/Users/fugedicsaba/dev/Elektrolit/src/Elektrolit/Elektrolit.Android/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\FCsaba\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/fugedicsaba/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "monoandroid12.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "monoandroid12.0": {
           "projectReferences": {
-            "I:\\Personal\\Elektrolit\\Elektrolit\\Elektrolit\\Elektrolit.csproj": {
-              "projectPath": "I:\\Personal\\Elektrolit\\Elektrolit\\Elektrolit\\Elektrolit.csproj"
+            "/Users/fugedicsaba/dev/Elektrolit/src/Elektrolit/Elektrolit/Elektrolit.csproj": {
+              "projectPath": "/Users/fugedicsaba/dev/Elektrolit/src/Elektrolit/Elektrolit/Elektrolit.csproj"
             }
           }
         }

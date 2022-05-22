@@ -1,12 +1,124 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Elektrolit.IgenyPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+<ContentPage
+    x:Class="Elektrolit.IgenyPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Beszerzendő">
+    <Grid Margin="20,20,20,20">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Button
+            x:Name="btn_megvan"
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="0,0,0,0"
+            BackgroundColor="#3d3d3d"
+            Clicked="btn_Megvan_Click"
+            Text="Beszerezve" />
+        <Button
+            x:Name="btn_delete"
+            Grid.Row="0"
+            Grid.Column="1"
+            Margin="0,0,0,0"
+            BackgroundColor="#3d3d3d"
+            Clicked="btn_IgenyTorol_Click"
+            Text="Igény Törlés" />
+
+        <Grid
+            Grid.Row="1"
+            Grid.ColumnSpan="2"
+            BackgroundColor="#a1d0ea">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="30" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label
+                Grid.Column="0"
+                FontSize="16"
+                HorizontalTextAlignment="Center"
+                Text="Kapacitás"
+                TextColor="Black"
+                VerticalTextAlignment="Center" />
+            <Label
+                Grid.Column="1"
+                FontSize="16"
+                HorizontalTextAlignment="Center"
+                Text="Feszültség"
+                TextColor="Black"
+                VerticalTextAlignment="Center" />
+            <Label
+                Grid.Column="2"
+                FontSize="16"
+                HorizontalTextAlignment="Center"
+                Text="DB"
+                TextColor="Black"
+                VerticalTextAlignment="Center" />
+            <Label
+                Grid.Column="3"
+                FontSize="16"
+                HorizontalTextAlignment="Center"
+                Text="Megjegyzés"
+                TextColor="Black"
+                VerticalTextAlignment="Center" />
+        </Grid>
+
+        <ListView
+            x:Name="List_Kondi"
+            Grid.Row="2"
+            Grid.ColumnSpan="2"
+            ItemTapped="ListItemSelected"
+            ItemsSource="{Binding Kondenzator}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="30" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label
+                                Grid.Column="0"
+                                HorizontalTextAlignment="Center"
+                                Text="{Binding kapacitas}"
+                                TextColor="#a1d0ea"
+                                VerticalTextAlignment="Center" />
+                            <Label
+                                Grid.Column="1"
+                                HorizontalTextAlignment="Center"
+                                Text="{Binding feszultseg}"
+                                TextColor="#a1d0ea"
+                                VerticalTextAlignment="Center" />
+                            <Label
+                                Grid.Column="2"
+                                HorizontalTextAlignment="Center"
+                                Text="{Binding darab}"
+                                TextColor="#a1d0ea"
+                                VerticalTextAlignment="Center" />
+                            <Label
+                                Grid.Column="3"
+                                HorizontalTextAlignment="Center"
+                                Text="{Binding megjegyzes}"
+                                TextColor="#a1d0ea"
+                                VerticalTextAlignment="Center" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
 </ContentPage>

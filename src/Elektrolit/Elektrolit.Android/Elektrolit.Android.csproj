@@ -16,7 +16,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v12.0</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseAapt2>true</AndroidUseAapt2>
@@ -92,7 +91,7 @@
   <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Elektrolit\Elektrolit.csproj">
-      <Project>{EAE976E4-FB1B-4664-847C-10281A33DA6A}</Project>
+      <Project>{74984153-E079-43C2-A8F2-496C9D0163F6}</Project>
       <Name>Elektrolit</Name>
     </ProjectReference>
   </ItemGroup>
