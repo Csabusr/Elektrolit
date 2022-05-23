@@ -100,11 +100,11 @@ namespace Elektrolit
         }
         private async void btn_Igeny_Click(object sender, EventArgs args)
         {
-            await Navigation.PushAsync(new NavigationPage(new IgenyPage(kondenzatorList)));
+            await Navigation.PushAsync(new NavigationPage(new IgenyPage(kondenzatorList, connectionString)));
         }
         private async void btn_Felvisz_Click(object sender, EventArgs args)
         {
-            await Navigation.PushAsync(new NavigationPage(new FelviszPage(kondenzatorList)));
+            await Navigation.PushAsync(new NavigationPage(new FelviszPage(kondenzatorList, connectionString)));
         }
         private async void btn_Felhasznal_Click(object sender, EventArgs args)
         {

@@ -4,9 +4,120 @@
              x:Class="Elektrolit.FelhasznalPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Grid Margin="20,20,20,20">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Column="0"
+                        FontSize="15"
+                        HorizontalTextAlignment="Center"
+                        Text="Készítendő termék: "
+                        VerticalTextAlignment="Center" />
+                    <Label
+                        x:Name="lbl_Egyed"
+                        Grid.Column="1"
+                        FontSize="15"
+                        HorizontalTextAlignment="Center"
+                        Text="#####"
+                        VerticalTextAlignment="Center" />
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Row="0"
+                        FontSize="15"
+                        HorizontalTextAlignment="Start"
+                        Text="Kapacitás"
+                        VerticalTextAlignment="Center" />
+                    <Entry
+                        x:Name="entry_Kapacitas"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        HorizontalTextAlignment="End" 
+                        TextChanged="entry_Kapacitas_TextChanged"/>
+                    <Picker
+                        x:Name="picker_Kapacitas"
+                        Title="Kapacitás"
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        HorizontalTextAlignment="Start"
+                        SelectedIndexChanged="picker_Kapacitas_SelectionChanged">
+                        <Picker.Items>
+                            <x:String>F</x:String>
+                            <x:String>mf</x:String>
+                            <x:String>µF</x:String>
+                            <x:String>nF</x:String>
+                            <x:String>pF</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                    <Label
+                        Grid.Row="2"
+                        FontSize="15"
+                        HorizontalTextAlignment="Start"
+                        Text="Feszültség"
+                        VerticalTextAlignment="Center" />
+                    <Entry
+                        x:Name="entry_Feszultseg"
+                        Grid.Row="3"
+                        Grid.Column="0"
+                        HorizontalTextAlignment="End" 
+                        TextChanged="entry_Feszultseg_TextChanged"/>
+                    <Picker
+                        x:Name="picker_Feszultseg"
+                        Title="Feszültség"
+                        Grid.Row="3"
+                        Grid.Column="1"
+                        HorizontalTextAlignment="Start"
+                        SelectedIndex="0"
+                        SelectedIndexChanged="picker_Feszultseg_SelectionChanged">
+                        <Picker.Items>
+                            <x:String>V</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                    <Label
+                        Grid.Row="4"
+                        FontSize="15"
+                        HorizontalTextAlignment="Start"
+                        Text="Darab"
+                        VerticalTextAlignment="Center" />
+                    <Entry
+                        x:Name="entry_darab"
+                        Grid.Row="5"
+                        Grid.ColumnSpan="2"
+                        HorizontalTextAlignment="Center" 
+                        TextChanged="entry_Darab_TextChanged"/>
+
+
+                    <Button
+                        Grid.Row="6"
+                        Grid.ColumnSpan="2"
+                        Text="Rögzít" 
+                        Clicked="btn_Felvisz_Click"/>
+                </Grid>
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

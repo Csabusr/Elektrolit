@@ -15,13 +15,14 @@ namespace Elektrolit
 
         Kondenzator selectedKondenzator = new Kondenzator();
         List<Kondenzator> nullKondensators = new List<Kondenzator>();
-        string connectionString = "server=t610nas.ddns.net;uid=t610nas;port=3306;pwd=FuCsab_1298;OldGuids=True;Initial Catalog=t610nas;";
+        string connectionString;
 
 
-        public IgenyPage(List<Kondenzator> kondenzatorList)
+        public IgenyPage(List<Kondenzator> kondenzatorList, string connectionStringIn)
         {
             InitializeComponent();
 
+            connectionString = connectionStringIn;
 
             foreach (Kondenzator item in kondenzatorList)
             {
