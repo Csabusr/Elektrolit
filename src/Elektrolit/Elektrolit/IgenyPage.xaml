@@ -42,6 +42,7 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="30" />
+                <ColumnDefinition Width="30" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Label
@@ -62,11 +63,18 @@
                 Grid.Column="2"
                 FontSize="16"
                 HorizontalTextAlignment="Center"
-                Text="DB"
+                Text="Kell"
                 TextColor="Black"
                 VerticalTextAlignment="Center" />
             <Label
                 Grid.Column="3"
+                FontSize="16"
+                HorizontalTextAlignment="Center"
+                Text="Van"
+                TextColor="Black"
+                VerticalTextAlignment="Center" />
+            <Label
+                Grid.Column="4"
                 FontSize="16"
                 HorizontalTextAlignment="Center"
                 Text="Megjegyzés"
@@ -79,7 +87,7 @@
             Grid.Row="2"
             Grid.ColumnSpan="2"
             ItemTapped="ListItemSelected"
-            ItemsSource="{Binding Kondenzator}">
+            ItemsSource="{Binding beszerKondenzator}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -88,6 +96,7 @@
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="30" />
                                 <ColumnDefinition Width="30" />
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
@@ -106,11 +115,17 @@
                             <Label
                                 Grid.Column="2"
                                 HorizontalTextAlignment="Center"
-                                Text="{Binding darab}"
+                                Text="{Binding darabkell}"
                                 TextColor="#a1d0ea"
                                 VerticalTextAlignment="Center" />
                             <Label
                                 Grid.Column="3"
+                                HorizontalTextAlignment="Center"
+                                Text="{Binding darabvan}"
+                                TextColor="#a1d0ea"
+                                VerticalTextAlignment="Center" />
+                            <Label
+                                Grid.Column="4"
                                 HorizontalTextAlignment="Center"
                                 Text="{Binding megjegyzes}"
                                 TextColor="#a1d0ea"

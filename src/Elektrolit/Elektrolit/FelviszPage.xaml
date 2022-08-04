@@ -19,20 +19,17 @@
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
                     <Label
-                        Grid.Column="0"
-                        FontSize="15"
-                        HorizontalTextAlignment="Center"
-                        Text="Készítendő termék: "
-                        VerticalTextAlignment="Center" />
-                    <Label
-                        Grid.Column="1"
-                        FontSize="15"
+                        x:Name="lbl_product"
+                        Grid.ColumnSpan="2"
+                        FontSize="28"
                         HorizontalTextAlignment="Center"
                         Text="#####"
                         VerticalTextAlignment="Center" />
                 </Grid>
                 <Grid Grid.Row="1">
                     <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
                         <RowDefinition Height="*" />
                         <RowDefinition Height="*" />
                         <RowDefinition Height="*" />
@@ -44,19 +41,25 @@
                     </Grid.ColumnDefinitions>
                     <Label
                         Grid.Row="0"
+                        Grid.ColumnSpan="2"
                         FontSize="15"
+                        HorizontalOptions="Center"
                         HorizontalTextAlignment="Start"
                         Text="Kapacitás"
                         VerticalTextAlignment="Center" />
                     <Entry
+                        x:Name="en_kapacitas"
                         Grid.Row="1"
                         Grid.Column="0"
-                        HorizontalTextAlignment="End" />
+                        HorizontalTextAlignment="End"
+                        TextChanged="en_kapacitas_TextChanged" />
                     <Picker
+                        x:Name="pi_kapacitas"
                         Title="Kapacitás"
                         Grid.Row="1"
                         Grid.Column="1"
-                        HorizontalTextAlignment="Start">
+                        HorizontalTextAlignment="Start"
+                        SelectedIndexChanged="pi_kapacitas_SelectedIndexChanged">
                         <Picker.Items>
                             <x:String>F</x:String>
                             <x:String>mf</x:String>
@@ -68,20 +71,26 @@
 
                     <Label
                         Grid.Row="2"
+                        Grid.ColumnSpan="2"
                         FontSize="15"
+                        HorizontalOptions="Center"
                         HorizontalTextAlignment="Start"
                         Text="Feszültség"
                         VerticalTextAlignment="Center" />
                     <Entry
+                        x:Name="en_feszultseg"
                         Grid.Row="3"
                         Grid.Column="0"
-                        HorizontalTextAlignment="End" />
+                        HorizontalTextAlignment="End"
+                        TextChanged="en_feszultseg_TextChanged" />
                     <Picker
+                        x:Name="pi_feszultseg"
                         Title="Feszültség"
                         Grid.Row="3"
                         Grid.Column="1"
                         HorizontalTextAlignment="Start"
-                        SelectedIndex="0">
+                        SelectedIndex="0"
+                        SelectedIndexChanged="pi_feszultseg_SelectedIndexChanged">
                         <Picker.Items>
                             <x:String>V</x:String>
                         </Picker.Items>
@@ -89,18 +98,51 @@
 
                     <Label
                         Grid.Row="4"
+                        Grid.ColumnSpan="2"
                         FontSize="15"
+                        HorizontalOptions="Center"
                         HorizontalTextAlignment="Start"
                         Text="Darab"
                         VerticalTextAlignment="Center" />
                     <Entry
+                        x:Name="en_darab"
                         Grid.Row="5"
+                        Grid.ColumnSpan="2"
+                        HorizontalTextAlignment="Center"
+                        TextChanged="en_darab_TextChanged" />
+                    <Label
+                        Grid.Row="6"
+                        Grid.ColumnSpan="2"
+                        FontSize="15"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Start"
+                        Text="Megjegyzés"
+                        VerticalTextAlignment="Center" />
+                    <Entry
+                        x:Name="en_megjegyzes"
+                        Grid.Row="7"
                         Grid.ColumnSpan="2"
                         HorizontalTextAlignment="Center" />
 
+                    <Label
+                        Grid.Row="8"
+                        Grid.Column="0"
+                        FontSize="20"
+                        HorizontalTextAlignment="Center"
+                        Text="Beszerzendő"
+                        VerticalTextAlignment="Center" />
+                    <CheckBox
+                        x:Name="cb_beszerzendo"
+                        Grid.Row="8"
+                        Grid.Column="1"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center" />
+
+
                     <Button
-                        Grid.Row="6"
+                        Grid.Row="9"
                         Grid.ColumnSpan="2"
+                        Clicked="Button_Clicked"
                         Text="Rögzít" />
                 </Grid>
             </Grid>

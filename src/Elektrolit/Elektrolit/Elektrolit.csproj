@@ -11,6 +11,9 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType></DebugType>
+  </PropertyGroup>
   <ItemGroup>
     <Content Include="capacitor.ico" />
   </ItemGroup>
@@ -34,5 +37,8 @@
     <EmbeddedResource Update="ListPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="FontAwesome.WPF" />
   </ItemGroup>
 </Project>

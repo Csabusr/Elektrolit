@@ -20,7 +20,7 @@ namespace Elektrolit
 
             foreach (Kondenzator item in kondenzatorList)
             {
-                if(item.kell == false && item.darab > 0)
+                if(item.darab > 0)
                 {
                     notNullKondensators.Add(item);
                 }
