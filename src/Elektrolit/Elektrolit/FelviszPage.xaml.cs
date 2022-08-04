@@ -20,7 +20,7 @@ namespace Elektrolit
         public FelviszPage(List<Kondenzator> kondenzatorListin)
         {
             InitializeComponent();
-            lbl_product.FontSize = 28;
+            lbl_product.FontSize = 22;
             kondenzatorList = kondenzatorListin;
         }
 
